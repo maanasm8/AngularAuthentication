@@ -1,0 +1,34 @@
+<div class="container mt-5">
+  <form [formGroup]="inputForm">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="name@example.com"
+        formControlName="emailFormControl"
+      />
+    </div>
+    <div
+      *ngIf="
+        this.inputForm.get('emailFormControl')?.hasError('required') &&
+        this.inputForm.get('emailFormControl')?.touched
+      "
+    >
+      <small class="text-danger">Email is Required</small>
+    </div>
+    <!-- <div
+      *ngIf="
+        this.inputForm.get('emailFormControl')?.hasError('email') &&
+        this.inputForm.get('emailFormControl')?.touched
+      "
+    >
+      <small class="text-danger">Check Email Format</small>
+    </div> -->
+
+    <button type="button" class="btn btn-primary" (click)="submitForm()">
+      Submit
+    </button>
+  </form>
+</div>

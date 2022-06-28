@@ -1,0 +1,21 @@
+{
+  "userEmail": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "emailFormControl": "fds@gmail.com",
+      "id": 2
+    },
+    {
+      "emailFormControl": "fad@g.com",
+      "id": 3
+    },
+    {
+      "emailFormControl": "box@mg.com",
+      "id": 4
+    }
+  ]
+}
